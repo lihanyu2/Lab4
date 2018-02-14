@@ -73,6 +73,27 @@ public class Colosseum {
      */
     public static Pokemon buildPokemon() {
         Pokemon tempPokemon = new Pokemon();
+        System.out.println("Please name your Pokemon:");
+        tempPokemon.name = myScan.next();
+        System.out.println("How many hit points will it have?");
+        tempPokemon.hitPoints = myScan.nextInt();
+        if (tempPokemon.hitPoints > 50 || tempPokemon.hitPoints < 1) {
+            System.out.println("Sorry. Hit points must be between 1 and 50");
+            tempPokemon.hitPoints = myScan.nextInt();
+        }
+        System.out.println("Split fifty points between attack level and defense level");
+        System.out.println("Enter your attack level (1-49):");
+        tempPokemon.attackLevel = myScan.nextInt();
+        if (tempPokemon.attackLevel > 49 || tempPokemon.attackLevel < 1) {
+            System.out.println("Sorry. The attack level must be between 1 and 49");
+            tempPokemon.attackLevel = myScan.nextInt();
+        }
+        System.out.println("Enter your defense level (1-49");
+        tempPokemon.defenseLevel = myScan.nextInt();
+        if (tempPokemon.defenseLevel > 49 || tempPokemon.defenseLevel < 1) {
+            System.out.println("Sorry. The defense level must be between 1 and 49");
+            tempPokemon.defenseLevel = myScan.nextInt();
+        }
         return tempPokemon;
     }
 
@@ -113,7 +134,7 @@ public class Colosseum {
         System.out.println("Player 1, build your Pokemon!");
         System.out.println("=================");
         firstPokemon = buildPokemon();
-        firstPokemon.name = "Chuchu";
+        firstPokemon.name = .name;
 
         System.out.println("");
 
